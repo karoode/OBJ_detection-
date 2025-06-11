@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify
 import openai
 import time
 
-client = openai.OpenAI(api_key="Your_API_KEY")
+client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
